@@ -1,31 +1,39 @@
-The game update logic that gets run whenever a player starts the game goes like this:
+1. The outermost loops are run every 60 seconds. This loop is the only loop uses seconds as the unit.
+2. All inner loops operate on counter, increment and decrement by 1 each time.
+3. The calculation done within each outermost loop determines the end state by the end of that 60 seconds.
+4. Each toy can only be occupied by one cat a time.
+5. Each cat can only occupy a toy a time.
+6. If a cat's attention counter reaches 0 at the end of an outermost loop, the cat will leave the cat.
+7. The end state of the initial outermost loop of a cat encountering a toy, the cat's attention counter should be 1 less than the total attention.
 
-1. Check the previous_game_end_time and the game_start_time. Calculate time_elapsed in epoch second.
+```
+Calculate the time elapsed from the previous game end time and the game start time.
 
-2. Game state is updated every 60 seconds.
+Load the game state json file into a game state dictionary.
 
-3. Each game state loop contains the change the game should undergo by the end of the loop. 
+Within each game state loop, the game state update function is called with the game state dictionary. The remaining time is reduced by 60 seconds. When the remaining time reaches 0, overwrite the game state json file.
 
-4. If a cat decides to stop playing, the cat will only leave the toy at the end of game state loop. Even if there is another cat wanting to play with the same toy, that new cat needs to wait until the next game state loop.
-
-5. Within each game state loop
-
-	1. Get the list of room_items in the room.
-
-	2. For each room_item in the room_items list
-
-		1. If room_item is occupied by a cat
-
-			1. Reduce the cat's remaining_attention_to_toy_counter by 1
-
-			2. If the remaining_attention_to_toy_counter reaches 0
-
-				1. Calculate rewards from this cat
-
-				2. remove the cat from the room
-
-				3. Update reward list for this cat
-
-		2. If room_item is not occupied
-
-			1. Create a list of eligible_cats
+	Get the list of room items.
+	
+	For each room item
+	
+		If the room item is occupied by a cat
+		
+			Reduce the cat's remaining attention to toy counter by 1.
+			
+			If the remaining attention to toy counter reaches 0
+			
+				Calculate the cat's reward
+				
+				Remove the cat from the room
+				
+				Update this cat's entry on the reward list
+		
+		If the room item is not occupied by a cat
+		
+			Get a list of eligible cats. Get a list of cats from the eligible cat list whose favorite toy is the room item
+			
+			Select a cat from the eligible favourite toy cat list to occupy the room item
+			
+			
+```
