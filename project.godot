@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="godot-meowland"
+run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+JsonParser="*res://scripts/data/json_parser.gd"
 
 [rendering]
 
