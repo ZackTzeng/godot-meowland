@@ -1,0 +1,22 @@
+{
+	"rubber_ball": {
+		"name": "rubber ball",
+		"description": "a cool rubber ball!",
+		"cost": 5
+	},
+	"paper_bag": {
+		"name": "paper bag",
+		"description": "a plain but fun paper bag!",
+		"cost": 10
+	},
+	"fishbowl": {
+		"name": "fishbowl",
+		"description": "a cool fishbowl!",
+		"cost": 15
+	},
+	"plain_pillow": {
+		"name": "plain pillow",
+		"description": "a comfy plain pillow!",
+		"cost": 20
+	}
+}

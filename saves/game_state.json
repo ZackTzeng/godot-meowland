@@ -1,8 +1,4 @@
 {
-	"items": {
-		"rubber_ball": {
-			"name": "rubber ball",
-			
-		}
-	}
+	"room_items": {},
+	"room_cats": {}
 }
