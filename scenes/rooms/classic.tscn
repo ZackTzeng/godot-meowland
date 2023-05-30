@@ -8,4 +8,3 @@ script = ExtResource("1_gbnq4")
 [node name="Label" type="Label" parent="."]
 offset_right = 1148.0
 offset_bottom = 643.0
-text = "Test"

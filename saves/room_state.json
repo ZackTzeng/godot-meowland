@@ -1,0 +1,22 @@
+{
+	"previous_end_time": 1685428943.42852,
+	"rewards": {
+		"felix": 56,
+		"peeble": 67,
+		"pukka": 58
+	},
+	"room_cats": [
+		"felix",
+		"peeble"
+	],
+	"room_items": {
+		"example_item": {
+			"occupant": "peeble",
+			"remaining_attention": 2
+		},
+		"example_item2": {
+			"occupant": "felix",
+			"remaining_attention": 2
+		}
+	}
+}

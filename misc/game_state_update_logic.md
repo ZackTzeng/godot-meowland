@@ -34,6 +34,4 @@ Within each game state loop, the game state update function is called with the g
 			Get a list of eligible cats. Get a list of cats from the eligible cat list whose favorite toy is the room item
 			
 			Select a cat from the eligible favourite toy cat list to occupy the room item
-			
-			
 ```

@@ -2,19 +2,19 @@
 	"pukka": {
 		"name": "Pukka",
 		"description": "a black and white cute cat!",
-		"attention_to_toy": 10,
+		"total_attention": 2,
 		"favourite_toy": "paper bag"
 	},
 	"peeble": {
 		"name": "Peeble",
 		"description": "a gray longhair cute cat!",
-		"attention_to_toy": 7,
+		"total_attention": 3,
 		"favourite_toy": "rubber ball"
 	},
 	"felix": {
 		"name": "Felix",
 		"description": "an orange and white shorthair cute cat!",
-		"attention_to_toy": 4,
+		"total_attention": 4,
 		"favourite_toy": "fishbowl"
 	}
 }
