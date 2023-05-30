@@ -9,12 +9,15 @@
 		"felix",
 		"peeble"
 	],
+	"location_index": ["example_item", "example_item2"],
 	"room_items": {
 		"example_item": {
+			"location_index": 0, 
 			"occupant": "peeble",
 			"remaining_attention": 2
 		},
 		"example_item2": {
+			"location_index": 1, 
 			"occupant": "felix",
 			"remaining_attention": 2
 		}
